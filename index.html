@@ -5,9 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>LEVANT DEVELOPMENT INITIATIVE</title>
-  <meta name="description" content="LEVANT DEVELOPMENT INITIATIVE is a non-profit, independent and non-partisan association based in Malmö, Sweden, working as a development and cultural bridge between Sweden and Syria.">
+
+  <meta
+    name="description"
+    content="LEVANT DEVELOPMENT INITIATIVE is a non-profit, independent and non-partisan association based in Malmö, Sweden, working as a development and cultural bridge between Sweden and Syria."
+  >
+
+  <!-- IBM Plex Sans + IBM Plex Sans Arabic -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
 
   <style>
+
     :root {
       --olive: #566b3d;
       --olive-dark: #40532d;
@@ -35,12 +49,13 @@
 
     body {
       font-family:
-        Inter,
+        "IBM Plex Sans",
         -apple-system,
         BlinkMacSystemFont,
         "Segoe UI",
         Arial,
         sans-serif;
+
       color: var(--dark);
       background: var(--white);
       line-height: 1.65;
@@ -48,10 +63,38 @@
 
     body[dir="rtl"] {
       font-family:
+        "IBM Plex Sans Arabic",
         "Segoe UI",
         Tahoma,
         Arial,
         sans-serif;
+    }
+
+    body[dir="rtl"] h1,
+    body[dir="rtl"] h2,
+    body[dir="rtl"] h3,
+    body[dir="rtl"] p,
+    body[dir="rtl"] a,
+    body[dir="rtl"] button {
+      font-family:
+        "IBM Plex Sans Arabic",
+        "Segoe UI",
+        Tahoma,
+        Arial,
+        sans-serif;
+    }
+
+    body[dir="rtl"] h1,
+    body[dir="rtl"] h2 {
+      letter-spacing: 0;
+    }
+
+    body[dir="rtl"] h1 {
+      line-height: 1.25;
+    }
+
+    body[dir="rtl"] h2 {
+      line-height: 1.4;
     }
 
     a {
@@ -69,13 +112,16 @@
       margin: 0 auto;
     }
 
-    /* ---------------- HEADER ---------------- */
+
+    /* =========================
+       HEADER
+    ========================= */
 
     header {
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(255,255,255,0.96);
+      background: rgba(255,255,255,0.97);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid rgba(229,227,218,0.8);
     }
@@ -102,7 +148,7 @@
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 26px;
+      gap: 25px;
       list-style: none;
     }
 
@@ -115,6 +161,12 @@
 
     .nav-links a:hover {
       color: var(--olive);
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
 
     .language-btn {
@@ -143,13 +195,25 @@
       color: var(--dark);
     }
 
-    /* ---------------- HERO ---------------- */
+
+    /* =========================
+       HERO
+    ========================= */
 
     .hero {
       background:
-        radial-gradient(circle at 85% 20%, rgba(111,135,77,.13), transparent 30%),
-        radial-gradient(circle at 10% 80%, rgba(163,61,52,.08), transparent 28%),
+        radial-gradient(
+          circle at 85% 20%,
+          rgba(111,135,77,.13),
+          transparent 30%
+        ),
+        radial-gradient(
+          circle at 10% 80%,
+          rgba(163,61,52,.08),
+          transparent 28%
+        ),
         var(--cream);
+
       padding: 105px 0 100px;
     }
 
@@ -176,6 +240,7 @@
       letter-spacing: -2px;
       max-width: 800px;
       margin-bottom: 25px;
+      font-weight: 700;
     }
 
     .hero h1 span {
@@ -258,7 +323,10 @@
       font-size: 15px;
     }
 
-    /* ---------------- GENERAL SECTIONS ---------------- */
+
+    /* =========================
+       GENERAL SECTIONS
+    ========================= */
 
     section {
       padding: 95px 0;
@@ -290,7 +358,10 @@
       font-size: 17px;
     }
 
-    /* ---------------- ABOUT ---------------- */
+
+    /* =========================
+       ABOUT
+    ========================= */
 
     .about {
       background: white;
@@ -330,7 +401,10 @@
       color: var(--muted);
     }
 
-    /* ---------------- CARDS ---------------- */
+
+    /* =========================
+       WHAT WE DO
+    ========================= */
 
     .cards-section {
       background: var(--cream);
@@ -372,7 +446,10 @@
       font-size: 15px;
     }
 
-    /* ---------------- INITIATIVES ---------------- */
+
+    /* =========================
+       INITIATIVES
+    ========================= */
 
     .initiatives {
       background: white;
@@ -400,7 +477,10 @@
       font-size: 15px;
     }
 
-    /* ---------------- GET INVOLVED ---------------- */
+
+    /* =========================
+       GET INVOLVED
+    ========================= */
 
     .involved {
       background: var(--olive-dark);
@@ -438,7 +518,10 @@
       font-size: 14px;
     }
 
-    /* ---------------- NEWS ---------------- */
+
+    /* =========================
+       NEWS
+    ========================= */
 
     .news {
       background: var(--cream);
@@ -463,7 +546,10 @@
       margin: auto;
     }
 
-    /* ---------------- CONTACT ---------------- */
+
+    /* =========================
+       CONTACT
+    ========================= */
 
     .contact {
       background: white;
@@ -529,7 +615,75 @@
       margin-bottom: 22px;
     }
 
-    /* ---------------- FOOTER ---------------- */
+
+    /* =========================
+       SOCIAL MEDIA
+    ========================= */
+
+    .social {
+      background: var(--cream);
+      padding: 70px 0;
+    }
+
+    .social-content {
+      text-align: center;
+    }
+
+    .social-content .section-label {
+      margin-bottom: 8px;
+    }
+
+    .social-content h2 {
+      font-size: 34px;
+      margin-bottom: 10px;
+    }
+
+    .social-content p {
+      color: var(--muted);
+      margin-bottom: 28px;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .social-link {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: white;
+      border: 1px solid var(--border);
+      color: var(--dark);
+      transition:
+        transform .2s ease,
+        background .2s ease,
+        color .2s ease,
+        border-color .2s ease;
+    }
+
+    .social-link:hover {
+      transform: translateY(-4px);
+      background: var(--olive);
+      color: white;
+      border-color: var(--olive);
+    }
+
+    .social-link svg {
+      width: 21px;
+      height: 21px;
+      fill: currentColor;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
 
     footer {
       background: #1d211d;
@@ -584,18 +738,10 @@
       font-size: 12px;
     }
 
-    /* ---------------- RTL ---------------- */
 
-    body[dir="rtl"] .eyebrow,
-    body[dir="rtl"] .section-label {
-      letter-spacing: 0;
-    }
-
-    body[dir="rtl"] .hero h1 {
-      letter-spacing: 0;
-    }
-
-    /* ---------------- MOBILE ---------------- */
+    /* =========================
+       MOBILE
+    ========================= */
 
     @media (max-width: 900px) {
 
@@ -609,12 +755,6 @@
 
       .menu-btn {
         display: block;
-      }
-
-      .nav-right {
-        display: flex;
-        align-items: center;
-        gap: 10px;
       }
 
       .nav-links {
@@ -682,10 +822,15 @@
       }
     }
 
+
     @media (max-width: 600px) {
 
       .hero h1 {
         font-size: 43px;
+      }
+
+      body[dir="rtl"] .hero h1 {
+        font-size: 40px;
       }
 
       .hero-text {
@@ -711,72 +856,185 @@
       .contact-note {
         padding: 25px;
       }
+
+      .social {
+        padding: 60px 0;
+      }
+
+      .social-content h2 {
+        font-size: 29px;
+      }
+
+      .social-link {
+        width: 48px;
+        height: 48px;
+      }
     }
+
   </style>
 </head>
 
+
 <body>
 
-  <!-- HEADER -->
+  <!-- =========================
+       HEADER
+  ========================= -->
+
   <header>
+
     <div class="container nav">
 
       <a href="#home" class="logo-link">
-        <img src="logo.png" alt="LEVANT DEVELOPMENT INITIATIVE" class="logo">
+        <img
+          src="logo.png"
+          alt="LEVANT DEVELOPMENT INITIATIVE"
+          class="logo"
+        >
       </a>
 
+
       <ul class="nav-links" id="navLinks">
-        <li><a href="#about" data-en="About Us" data-ar="من نحن">About Us</a></li>
-        <li><a href="#what-we-do" data-en="What We Do" data-ar="ماذا نفعل">What We Do</a></li>
-        <li><a href="#initiatives" data-en="Our Initiatives" data-ar="مجالات العمل">Our Initiatives</a></li>
-        <li><a href="#involved" data-en="Get Involved" data-ar="ساهم معنا">Get Involved</a></li>
-        <li><a href="#news" data-en="News & Updates" data-ar="الأخبار والتحديثات">News & Updates</a></li>
-        <li><a href="#contact" data-en="Contact" data-ar="تواصل معنا">Contact</a></li>
+
+        <li>
+          <a
+            href="#about"
+            data-en="About Us"
+            data-ar="من نحن"
+          >
+            About Us
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#what-we-do"
+            data-en="What We Do"
+            data-ar="ماذا نفعل"
+          >
+            What We Do
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#initiatives"
+            data-en="Our Initiatives"
+            data-ar="مجالات العمل"
+          >
+            Our Initiatives
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#involved"
+            data-en="Get Involved"
+            data-ar="ساهم معنا"
+          >
+            Get Involved
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#news"
+            data-en="News & Updates"
+            data-ar="الأخبار والتحديثات"
+          >
+            News & Updates
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#contact"
+            data-en="Contact"
+            data-ar="تواصل معنا"
+          >
+            Contact
+          </a>
+        </li>
+
       </ul>
 
+
       <div class="nav-right">
-        <button class="language-btn" id="languageBtn" onclick="toggleLanguage()">العربية</button>
-        <button class="menu-btn" id="menuBtn" onclick="toggleMenu()" aria-label="Open menu">☰</button>
+
+        <button
+          class="language-btn"
+          id="languageBtn"
+          onclick="toggleLanguage()"
+        >
+          العربية
+        </button>
+
+        <button
+          class="menu-btn"
+          id="menuBtn"
+          onclick="toggleMenu()"
+          aria-label="Open menu"
+        >
+          ☰
+        </button>
+
       </div>
 
     </div>
+
   </header>
 
 
-  <!-- HERO -->
+  <!-- =========================
+       MAIN
+  ========================= -->
+
   <main>
 
+
+    <!-- HERO -->
+
     <section class="hero" id="home">
+
       <div class="container hero-grid">
 
         <div>
+
           <div
             class="eyebrow"
             data-en="A development & cultural bridge"
-            data-ar="جسر للتنمية والتواصل الثقافي">
+            data-ar="جسر للتنمية والتواصل الثقافي"
+          >
             A development & cultural bridge
           </div>
 
+
           <h1
             data-en="Building stronger communities. <span>Creating opportunities.</span>"
-            data-ar="نبني مجتمعات أقوى. <span>ونصنع فرصاً جديدة.</span>">
+            data-ar="نبني مجتمعات أقوى. <span>ونصنع فرصاً جديدة.</span>"
+          >
             Building stronger communities.
             <span>Creating opportunities.</span>
           </h1>
 
+
           <p
             class="hero-text"
             data-en="LEVANT DEVELOPMENT INITIATIVE is a non-profit, independent and non-partisan association working to strengthen connections between Sweden and Syria through development, empowerment, entrepreneurship and cultural exchange."
-            data-ar="مبادرة بلاد الشام للتنمية هي جمعية غير ربحية ومستقلة وغير حزبية، تعمل على تعزيز الروابط بين السويد وسورية من خلال التنمية والتمكين وريادة الأعمال والتبادل الثقافي.">
+            data-ar="مبادرة بلاد الشام للتنمية هي جمعية غير ربحية ومستقلة وغير حزبية، تعمل على تعزيز الروابط بين السويد وسورية من خلال التنمية والتمكين وريادة الأعمال والتبادل الثقافي."
+          >
             LEVANT DEVELOPMENT INITIATIVE is a non-profit, independent and non-partisan association working to strengthen connections between Sweden and Syria through development, empowerment, entrepreneurship and cultural exchange.
           </p>
 
+
           <div class="hero-buttons">
+
             <a
               href="#what-we-do"
               class="btn btn-primary"
               data-en="Explore our work"
-              data-ar="اكتشف مجالات عملنا">
+              data-ar="اكتشف مجالات عملنا"
+            >
               Explore our work
             </a>
 
@@ -784,480 +1042,674 @@
               href="#contact"
               class="btn btn-secondary"
               data-en="Get in touch"
-              data-ar="تواصل معنا">
+              data-ar="تواصل معنا"
+            >
               Get in touch
             </a>
+
           </div>
+
         </div>
 
+
         <div class="hero-card">
-          <div class="hero-card-mark">🌿</div>
+
+          <div class="hero-card-mark">
+            🌿
+          </div>
 
           <h3
             data-en="Connecting people, knowledge and opportunities"
-            data-ar="ربط الناس والمعرفة والفرص">
+            data-ar="ربط الناس والمعرفة والفرص"
+          >
             Connecting people, knowledge and opportunities
           </h3>
 
           <p
             data-en="Our work is rooted in the idea that sustainable development begins with people, local communities and meaningful cooperation."
-            data-ar="ننطلق في عملنا من إيماننا بأن التنمية المستدامة تبدأ بالإنسان والمجتمعات المحلية والتعاون الفعّال.">
+            data-ar="ننطلق في عملنا من إيماننا بأن التنمية المستدامة تبدأ بالإنسان والمجتمعات المحلية والتعاون الفعّال."
+          >
             Our work is rooted in the idea that sustainable development begins with people, local communities and meaningful cooperation.
           </p>
+
         </div>
 
       </div>
+
     </section>
 
 
     <!-- ABOUT -->
+
     <section class="about" id="about">
+
       <div class="container">
 
         <div class="section-header">
+
           <div
             class="section-label"
             data-en="About Us"
-            data-ar="من نحن">
+            data-ar="من نحن"
+          >
             About Us
           </div>
 
           <h2
             data-en="A bridge between Sweden and Syria"
-            data-ar="جسر بين السويد وسورية">
+            data-ar="جسر بين السويد وسورية"
+          >
             A bridge between Sweden and Syria
           </h2>
 
           <p
             data-en="We are building an independent platform for development, participation and cultural exchange."
-            data-ar="نعمل على بناء منصة مستقلة للتنمية والمشاركة والتبادل الثقافي.">
+            data-ar="نعمل على بناء منصة مستقلة للتنمية والمشاركة والتبادل الثقافي."
+          >
             We are building an independent platform for development, participation and cultural exchange.
           </p>
+
         </div>
+
 
         <div class="about-grid">
 
           <div class="about-copy">
+
             <p
               data-en="LEVANT DEVELOPMENT INITIATIVE is a non-profit, independent and politically non-partisan association based in Malmö, Sweden."
-              data-ar="مبادرة بلاد الشام للتنمية هي جمعية غير ربحية ومستقلة وغير حزبية سياسياً، مقرها في مدينة مالمو في السويد.">
+              data-ar="مبادرة بلاد الشام للتنمية هي جمعية غير ربحية ومستقلة وغير حزبية سياسياً، مقرها في مدينة مالمو في السويد."
+            >
               LEVANT DEVELOPMENT INITIATIVE is a non-profit, independent and politically non-partisan association based in Malmö, Sweden.
             </p>
 
+
             <p
               data-en="Our purpose is to serve as a development and cultural bridge between Sweden and Syria, while creating opportunities for individuals and local communities to learn, participate and develop."
-              data-ar="تهدف الجمعية إلى أن تكون جسراً للتنمية والتواصل الثقافي بين السويد وسورية، مع توفير فرص للأفراد والمجتمعات المحلية للتعلم والمشاركة والتطور.">
+              data-ar="تهدف الجمعية إلى أن تكون جسراً للتنمية والتواصل الثقافي بين السويد وسورية، مع توفير فرص للأفراد والمجتمعات المحلية للتعلم والمشاركة والتطور."
+            >
               Our purpose is to serve as a development and cultural bridge between Sweden and Syria, while creating opportunities for individuals and local communities to learn, participate and develop.
             </p>
 
+
             <p
               data-en="Our activities may take place in Sweden and internationally, including Syria, in accordance with Swedish legislation and applicable regulations in the countries where we operate."
-              data-ar="يمكن أن تمتد أنشطة الجمعية داخل السويد وعلى المستوى الدولي، بما في ذلك سورية، وفقاً للقوانين السويدية والأنظمة المعمول بها في البلدان التي نعمل فيها.">
+              data-ar="يمكن أن تمتد أنشطة الجمعية داخل السويد وعلى المستوى الدولي، بما في ذلك سورية، وفقاً للقوانين السويدية والأنظمة المعمول بها في البلدان التي نعمل فيها."
+            >
               Our activities may take place in Sweden and internationally, including Syria, in accordance with Swedish legislation and applicable regulations in the countries where we operate.
             </p>
+
           </div>
 
+
           <div class="about-highlight">
+
             <h3
               data-en="Our approach"
-              data-ar="نهجنا">
+              data-ar="نهجنا"
+            >
               Our approach
             </h3>
 
             <p
               data-en="We focus on practical development, knowledge exchange, local participation and cooperation. We believe that sustainable change is strengthened when people have the knowledge, skills and opportunities to take part in shaping their communities."
-              data-ar="نركز على التنمية العملية وتبادل المعرفة والمشاركة المحلية والتعاون. ونؤمن بأن التغيير المستدام يصبح أقوى عندما يمتلك الناس المعرفة والمهارات والفرص للمشاركة في بناء مجتمعاتهم.">
+              data-ar="نركز على التنمية العملية وتبادل المعرفة والمشاركة المحلية والتعاون. ونؤمن بأن التغيير المستدام يصبح أقوى عندما يمتلك الناس المعرفة والمهارات والفرص للمشاركة في بناء مجتمعاتهم."
+            >
               We focus on practical development, knowledge exchange, local participation and cooperation. We believe that sustainable change is strengthened when people have the knowledge, skills and opportunities to take part in shaping their communities.
             </p>
+
           </div>
 
         </div>
+
       </div>
+
     </section>
 
 
     <!-- WHAT WE DO -->
+
     <section class="cards-section" id="what-we-do">
+
       <div class="container">
 
         <div class="section-header">
+
           <div
             class="section-label"
             data-en="What We Do"
-            data-ar="ماذا نفعل">
+            data-ar="ماذا نفعل"
+          >
             What We Do
           </div>
 
           <h2
             data-en="From individual empowerment to community development"
-            data-ar="من تمكين الأفراد إلى تنمية المجتمعات">
+            data-ar="من تمكين الأفراد إلى تنمية المجتمعات"
+          >
             From individual empowerment to community development
           </h2>
 
           <p
             data-en="Our areas of work reflect the purpose and principles of the association."
-            data-ar="تعكس مجالات عملنا أهداف الجمعية ومبادئها الأساسية.">
+            data-ar="تعكس مجالات عملنا أهداف الجمعية ومبادئها الأساسية."
+          >
             Our areas of work reflect the purpose and principles of the association.
           </p>
+
         </div>
+
 
         <div class="cards-grid">
 
+
           <article class="card">
+
             <div class="card-number">01</div>
 
             <h3
               data-en="Individual Development & Empowerment"
-              data-ar="التنمية والتمكين الفردي">
+              data-ar="التنمية والتمكين الفردي"
+            >
               Individual Development & Empowerment
             </h3>
 
             <p
               data-en="Supporting people to strengthen knowledge, skills, leadership and active participation through training, knowledge exchange, advisory support and development opportunities."
-              data-ar="دعم الأفراد في تطوير المعرفة والمهارات والقيادة والمشاركة الفاعلة من خلال التدريب وتبادل المعرفة والاستشارات وفرص التطوير.">
+              data-ar="دعم الأفراد في تطوير المعرفة والمهارات والقيادة والمشاركة الفاعلة من خلال التدريب وتبادل المعرفة والاستشارات وفرص التطوير."
+            >
               Supporting people to strengthen knowledge, skills, leadership and active participation through training, knowledge exchange, advisory support and development opportunities.
             </p>
+
           </article>
 
 
           <article class="card">
+
             <div class="card-number">02</div>
 
             <h3
               data-en="Small-Scale Development & Entrepreneurship"
-              data-ar="المشاريع التنموية الصغيرة وريادة الأعمال">
+              data-ar="المشاريع التنموية الصغيرة وريادة الأعمال"
+            >
               Small-Scale Development & Entrepreneurship
             </h3>
 
             <p
               data-en="Initiating and supporting sustainable local development projects, entrepreneurship, networks and initiatives that can contribute to stronger communities."
-              data-ar="إطلاق ودعم مشاريع تنموية محلية مستدامة وريادة الأعمال والشبكات والمبادرات التي يمكن أن تساهم في بناء مجتمعات أكثر قوة.">
+              data-ar="إطلاق ودعم مشاريع تنموية محلية مستدامة وريادة الأعمال والشبكات والمبادرات التي يمكن أن تساهم في بناء مجتمعات أكثر قوة."
+            >
               Initiating and supporting sustainable local development projects, entrepreneurship, networks and initiatives that can contribute to stronger communities.
             </p>
+
           </article>
 
 
           <article class="card">
+
             <div class="card-number">03</div>
 
             <h3
               data-en="Knowledge & Capacity Building"
-              data-ar="المعرفة وبناء القدرات">
+              data-ar="المعرفة وبناء القدرات"
+            >
               Knowledge & Capacity Building
             </h3>
 
             <p
               data-en="Creating opportunities for learning, knowledge exchange and capacity development for individuals, local initiatives and emerging development efforts."
-              data-ar="خلق فرص للتعلم وتبادل المعرفة وبناء القدرات للأفراد والمبادرات المحلية والجهود التنموية الناشئة.">
+              data-ar="خلق فرص للتعلم وتبادل المعرفة وبناء القدرات للأفراد والمبادرات المحلية والجهود التنموية الناشئة."
+            >
               Creating opportunities for learning, knowledge exchange and capacity development for individuals, local initiatives and emerging development efforts.
             </p>
+
           </article>
 
 
           <article class="card">
+
             <div class="card-number">04</div>
 
             <h3
               data-en="Cultural & Social Relations"
-              data-ar="العلاقات الثقافية والاجتماعية">
+              data-ar="العلاقات الثقافية والاجتماعية"
+            >
               Cultural & Social Relations
             </h3>
 
             <p
               data-en="Strengthening cultural and social ties between Swedish and Syrian society through dialogue, mutual exchange, joint activities and social interaction."
-              data-ar="تعزيز الروابط الثقافية والاجتماعية بين المجتمعين السويدي والسوري من خلال الحوار والتبادل المتبادل والأنشطة المشتركة والتفاعل الاجتماعي.">
+              data-ar="تعزيز الروابط الثقافية والاجتماعية بين المجتمعين السويدي والسوري من خلال الحوار والتبادل المتبادل والأنشطة المشتركة والتفاعل الاجتماعي."
+            >
               Strengthening cultural and social ties between Swedish and Syrian society through dialogue, mutual exchange, joint activities and social interaction.
             </p>
+
           </article>
 
+
         </div>
+
       </div>
+
     </section>
 
 
     <!-- INITIATIVES -->
+
     <section class="initiatives" id="initiatives">
+
       <div class="container">
 
         <div class="section-header">
+
           <div
             class="section-label"
             data-en="Our Initiatives"
-            data-ar="مجالات المبادرات">
+            data-ar="مجالات المبادرات"
+          >
             Our Initiatives
           </div>
 
           <h2
             data-en="Turning ideas into practical opportunities"
-            data-ar="تحويل الأفكار إلى فرص عملية">
+            data-ar="تحويل الأفكار إلى فرص عملية"
+          >
             Turning ideas into practical opportunities
           </h2>
 
           <p
             data-en="The following areas provide a framework for future initiatives and partnerships."
-            data-ar="تمثل المجالات التالية إطاراً للمبادرات والشراكات المستقبلية.">
+            data-ar="تمثل المجالات التالية إطاراً للمبادرات والشراكات المستقبلية."
+          >
             The following areas provide a framework for future initiatives and partnerships.
           </p>
+
         </div>
+
 
         <div class="initiative-list">
 
+
           <div class="initiative">
+
             <h3
               data-en="Community Empowerment"
-              data-ar="تمكين المجتمعات">
+              data-ar="تمكين المجتمعات"
+            >
               Community Empowerment
             </h3>
 
             <p
               data-en="Supporting people and local initiatives with knowledge, skills and opportunities for participation."
-              data-ar="دعم الأفراد والمبادرات المحلية بالمعرفة والمهارات وفرص المشاركة.">
+              data-ar="دعم الأفراد والمبادرات المحلية بالمعرفة والمهارات وفرص المشاركة."
+            >
               Supporting people and local initiatives with knowledge, skills and opportunities for participation.
             </p>
+
           </div>
 
 
           <div class="initiative">
+
             <h3
               data-en="Local Development"
-              data-ar="التنمية المحلية">
+              data-ar="التنمية المحلية"
+            >
               Local Development
             </h3>
 
             <p
               data-en="Supporting small-scale, sustainable development efforts that respond to local needs."
-              data-ar="دعم جهود التنمية المحلية الصغيرة والمستدامة التي تستجيب للاحتياجات المحلية.">
+              data-ar="دعم جهود التنمية المحلية الصغيرة والمستدامة التي تستجيب للاحتياجات المحلية."
+            >
               Supporting small-scale, sustainable development efforts that respond to local needs.
             </p>
+
           </div>
 
 
           <div class="initiative">
+
             <h3
               data-en="Entrepreneurship & New Initiatives"
-              data-ar="ريادة الأعمال والمبادرات الجديدة">
+              data-ar="ريادة الأعمال والمبادرات الجديدة"
+            >
               Entrepreneurship & New Initiatives
             </h3>
 
             <p
               data-en="Creating networks, advisory support and knowledge platforms for entrepreneurs and emerging initiatives."
-              data-ar="بناء شبكات ومنصات معرفية وتقديم الدعم والاستشارات لرواد الأعمال والمبادرات الناشئة.">
+              data-ar="بناء شبكات ومنصات معرفية وتقديم الدعم والاستشارات لرواد الأعمال والمبادرات الناشئة."
+            >
               Creating networks, advisory support and knowledge platforms for entrepreneurs and emerging initiatives.
             </p>
+
           </div>
 
 
           <div class="initiative">
+
             <h3
               data-en="Sweden–Syria Exchange"
-              data-ar="التبادل بين السويد وسورية">
+              data-ar="التبادل بين السويد وسورية"
+            >
               Sweden–Syria Exchange
             </h3>
 
             <p
               data-en="Encouraging dialogue, cooperation and mutual cultural and social exchange."
-              data-ar="تشجيع الحوار والتعاون والتبادل الثقافي والاجتماعي المتبادل.">
+              data-ar="تشجيع الحوار والتعاون والتبادل الثقافي والاجتماعي المتبادل."
+            >
               Encouraging dialogue, cooperation and mutual cultural and social exchange.
             </p>
+
           </div>
 
+
         </div>
+
       </div>
+
     </section>
 
 
     <!-- GET INVOLVED -->
+
     <section class="involved" id="involved">
+
       <div class="container">
 
         <div class="section-header">
+
           <div
             class="section-label"
             data-en="Get Involved"
-            data-ar="ساهم معنا">
+            data-ar="ساهم معنا"
+          >
             Get Involved
           </div>
 
           <h2
             data-en="Development grows through participation"
-            data-ar="التنمية تنمو بالمشاركة">
+            data-ar="التنمية تنمو بالمشاركة"
+          >
             Development grows through participation
           </h2>
 
           <p
             data-en="There are different ways to contribute to the association and its future work."
-            data-ar="هناك طرق متعددة للمساهمة في الجمعية وفي عملها المستقبلي.">
+            data-ar="هناك طرق متعددة للمساهمة في الجمعية وفي عملها المستقبلي."
+          >
             There are different ways to contribute to the association and its future work.
           </p>
+
         </div>
+
 
         <div class="involved-grid">
 
+
           <div class="involved-card">
+
             <h3
               data-en="Become a Member"
-              data-ar="كن عضواً">
+              data-ar="كن عضواً"
+            >
               Become a Member
             </h3>
 
             <p
               data-en="Join the association and take part in its activities and development."
-              data-ar="انضم إلى الجمعية وشارك في أنشطتها وتطورها.">
+              data-ar="انضم إلى الجمعية وشارك في أنشطتها وتطورها."
+            >
               Join the association and take part in its activities and development.
             </p>
+
           </div>
 
 
           <div class="involved-card">
+
             <h3
               data-en="Volunteer"
-              data-ar="تطوع معنا">
+              data-ar="تطوع معنا"
+            >
               Volunteer
             </h3>
 
             <p
               data-en="Contribute your time, skills and experience to future initiatives."
-              data-ar="ساهم بوقتك ومهاراتك وخبرتك في المبادرات المستقبلية.">
+              data-ar="ساهم بوقتك ومهاراتك وخبرتك في المبادرات المستقبلية."
+            >
               Contribute your time, skills and experience to future initiatives.
             </p>
+
           </div>
 
 
           <div class="involved-card">
+
             <h3
               data-en="Partner"
-              data-ar="كن شريكاً">
+              data-ar="كن شريكاً"
+            >
               Partner
             </h3>
 
             <p
               data-en="Explore cooperation with the association on development and cultural initiatives."
-              data-ar="استكشف فرص التعاون مع الجمعية في المبادرات التنموية والثقافية.">
+              data-ar="استكشف فرص التعاون مع الجمعية في المبادرات التنموية والثقافية."
+            >
               Explore cooperation with the association on development and cultural initiatives.
             </p>
+
           </div>
 
 
           <div class="involved-card">
+
             <h3
               data-en="Support an Initiative"
-              data-ar="ادعم مبادرة">
+              data-ar="ادعم مبادرة"
+            >
               Support an Initiative
             </h3>
 
             <p
               data-en="Support future projects and local initiatives that align with our objectives."
-              data-ar="ادعم المشاريع والمبادرات المحلية المستقبلية التي تنسجم مع أهداف الجمعية.">
+              data-ar="ادعم المشاريع والمبادرات المحلية المستقبلية التي تنسجم مع أهداف الجمعية."
+            >
               Support future projects and local initiatives that align with our objectives.
             </p>
+
           </div>
 
+
         </div>
+
       </div>
+
     </section>
 
 
     <!-- NEWS -->
+
     <section class="news" id="news">
+
       <div class="container">
 
         <div class="section-header">
+
           <div
             class="section-label"
             data-en="News & Updates"
-            data-ar="الأخبار والتحديثات">
+            data-ar="الأخبار والتحديثات"
+          >
             News & Updates
           </div>
 
           <h2
             data-en="Follow our journey"
-            data-ar="تابعوا مسيرتنا">
+            data-ar="تابعوا مسيرتنا"
+          >
             Follow our journey
           </h2>
+
         </div>
+
 
         <div class="news-box">
 
           <h3
             data-en="Updates will be published here"
-            data-ar="سيتم نشر التحديثات هنا">
+            data-ar="سيتم نشر التحديثات هنا"
+          >
             Updates will be published here
           </h3>
 
           <p
             data-en="As our activities and initiatives develop, this section will share news, opportunities, events and other updates from LEVANT DEVELOPMENT INITIATIVE."
-            data-ar="مع تطور أنشطتنا ومبادراتنا، سيتم استخدام هذا القسم لمشاركة الأخبار والفرص والفعاليات والتحديثات المختلفة من مبادرة بلاد الشام للتنمية.">
+            data-ar="مع تطور أنشطتنا ومبادراتنا، سيتم استخدام هذا القسم لمشاركة الأخبار والفرص والفعاليات والتحديثات المختلفة من مبادرة بلاد الشام للتنمية."
+          >
             As our activities and initiatives develop, this section will share news, opportunities, events and other updates from LEVANT DEVELOPMENT INITIATIVE.
           </p>
 
         </div>
+
       </div>
+
     </section>
 
 
     <!-- CONTACT -->
+
     <section class="contact" id="contact">
+
       <div class="container">
 
         <div class="section-header">
+
           <div
             class="section-label"
             data-en="Contact"
-            data-ar="تواصل معنا">
+            data-ar="تواصل معنا"
+          >
             Contact
           </div>
 
           <h2
             data-en="Let's build meaningful connections"
-            data-ar="لنبنِ روابط ذات معنى">
+            data-ar="لنبنِ روابط ذات معنى"
+          >
             Let's build meaningful connections
           </h2>
 
           <p
             data-en="For membership, cooperation, partnerships or general enquiries, contact us directly."
-            data-ar="للعضوية أو التعاون أو الشراكات أو الاستفسارات العامة، يمكنكم التواصل معنا مباشرة.">
+            data-ar="للعضوية أو التعاون أو الشراكات أو الاستفسارات العامة، يمكنكم التواصل معنا مباشرة."
+          >
             For membership, cooperation, partnerships or general enquiries, contact us directly.
           </p>
+
         </div>
+
 
         <div class="contact-grid">
 
+
           <div class="contact-details">
 
+
             <div class="contact-item">
+
               <div class="contact-icon">📍</div>
+
               <div>
-                <strong data-en="Location" data-ar="الموقع">Location</strong>
-                <span data-en="Malmö, Sweden" data-ar="مالمو، السويد">Malmö, Sweden</span>
+
+                <strong
+                  data-en="Location"
+                  data-ar="الموقع"
+                >
+                  Location
+                </strong>
+
+                <span
+                  data-en="Malmö, Sweden"
+                  data-ar="مالمو، السويد"
+                >
+                  Malmö, Sweden
+                </span>
+
               </div>
+
             </div>
 
 
             <div class="contact-item">
+
               <div class="contact-icon">✉</div>
+
               <div>
-                <strong data-en="Email" data-ar="البريد الإلكتروني">Email</strong>
-                <a href="mailto:info@levant-dev.org">info@levant-dev.org</a>
+
+                <strong
+                  data-en="Email"
+                  data-ar="البريد الإلكتروني"
+                >
+                  Email
+                </strong>
+
+                <a href="mailto:info@levant-dev.org">
+                  info@levant-dev.org
+                </a>
+
               </div>
+
             </div>
 
 
             <div class="contact-item">
+
               <div class="contact-icon">☎</div>
+
               <div>
-                <strong data-en="Phone" data-ar="الهاتف">Phone</strong>
-                <a href="tel:+46739033301">0739 033301</a>
+
+                <strong
+                  data-en="Phone"
+                  data-ar="الهاتف"
+                >
+                  Phone
+                </strong>
+
+                <a href="tel:+46739033301">
+                  0739 033301
+                </a>
+
               </div>
+
             </div>
 
 
             <div class="contact-item">
+
               <div class="contact-icon">◎</div>
+
               <div>
-                <strong data-en="Organisation number" data-ar="رقم المنظمة">Organisation number</strong>
-                <span>802557-8157</span>
+
+                <strong
+                  data-en="Organisation number"
+                  data-ar="رقم المنظمة"
+                >
+                  Organisation number
+                </strong>
+
+                <span>
+                  802557-8157
+                </span>
+
               </div>
+
             </div>
+
 
           </div>
 
@@ -1266,13 +1718,15 @@
 
             <h3
               data-en="LEVANT DEVELOPMENT INITIATIVE"
-              data-ar="مبادرة بلاد الشام للتنمية">
+              data-ar="مبادرة بلاد الشام للتنمية"
+            >
               LEVANT DEVELOPMENT INITIATIVE
             </h3>
 
             <p
               data-en="A non-profit, independent and non-partisan association based in Malmö, Sweden."
-              data-ar="جمعية غير ربحية ومستقلة وغير حزبية، مقرها في مالمو، السويد.">
+              data-ar="جمعية غير ربحية ومستقلة وغير حزبية، مقرها في مالمو، السويد."
+            >
               A non-profit, independent and non-partisan association based in Malmö, Sweden.
             </p>
 
@@ -1280,107 +1734,353 @@
               href="mailto:info@levant-dev.org"
               class="btn btn-primary"
               data-en="Email us"
-              data-ar="راسلنا">
+              data-ar="راسلنا"
+            >
               Email us
             </a>
 
           </div>
 
+
         </div>
+
       </div>
+
     </section>
+
+
+    <!-- =========================
+         SOCIAL MEDIA
+    ========================= -->
+
+    <section class="social" id="social">
+
+      <div class="container">
+
+        <div class="social-content">
+
+          <div
+            class="section-label"
+            data-en="Connect with us"
+            data-ar="تابعونا وتواصلوا معنا"
+          >
+            Connect with us
+          </div>
+
+          <h2
+            data-en="Follow LEVANT"
+            data-ar="تابعوا مبادرة بلاد الشام"
+          >
+            Follow LEVANT
+          </h2>
+
+          <p
+            data-en="Our social media channels will be added here as they become available."
+            data-ar="سيتم إضافة قنوات التواصل الاجتماعي هنا عند إطلاقها."
+          >
+            Our social media channels will be added here as they become available.
+          </p>
+
+
+          <div class="social-links">
+
+
+            <!-- FACEBOOK -->
+            <a
+              href="#"
+              class="social-link"
+              aria-label="Facebook"
+              title="Facebook"
+            >
+
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M13.5 21v-8h2.7l.4-3h-3.1V8.1c0-.9.3-1.6 1.6-1.6h1.7V3.8c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.3H8v3h2.6v8h2.9z"/>
+              </svg>
+
+            </a>
+
+
+            <!-- INSTAGRAM -->
+            <a
+              href="#"
+              class="social-link"
+              aria-label="Instagram"
+              title="Instagram"
+            >
+
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm5.25-3.25a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5z"/>
+              </svg>
+
+            </a>
+
+
+            <!-- X -->
+            <a
+              href="#"
+              class="social-link"
+              aria-label="X"
+              title="X"
+            >
+
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M18.9 2H22l-6.77 7.74L23.2 22h-6.24l-4.89-6.4L6.47 22H3.36l7.24-8.28L2.8 2h6.4l4.42 5.84L18.9 2zm-1.1 17.8h1.73L8.28 4.08H6.43L17.8 19.8z"/>
+              </svg>
+
+            </a>
+
+
+            <!-- LINKEDIN -->
+            <a
+              href="#"
+              class="social-link"
+              aria-label="LinkedIn"
+              title="LinkedIn"
+            >
+
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5.2 3.2A2.2 2.2 0 1 1 5.2 7.6a2.2 2.2 0 0 1 0-4.4zM3.3 8.9h3.8V21H3.3V8.9zm6.2 0h3.6v1.65h.05c.5-.95 1.72-1.95 3.55-1.95 3.8 0 4.5 2.5 4.5 5.75V21h-3.8v-5.9c0-1.4-.03-3.2-1.95-3.2-1.95 0-2.25 1.52-2.25 3.1V21H9.5V8.9z"/>
+              </svg>
+
+            </a>
+
+
+            <!-- WHATSAPP -->
+            <a
+              href="#"
+              class="social-link"
+              aria-label="WhatsApp"
+              title="WhatsApp"
+            >
+
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 2a9.9 9.9 0 0 0-8.54 14.92L2 22l5.25-1.37A9.9 9.9 0 1 0 12 2zm0 2a7.9 7.9 0 0 1 6.1 12.92 7.9 7.9 0 0 1-8.62 2.34l-.3-.1-3.11.81.83-3.03-.1-.3A7.9 7.9 0 1 1 12 4zm-3.1 3.3c-.2 0-.5.07-.75.34-.25.27-.95.93-.95 2.27s.97 2.64 1.1 2.82c.14.18 1.88 3.02 4.67 4.12.65.26 1.16.41 1.56.53.66.2 1.26.17 1.73.1.53-.08 1.63-.67 1.86-1.31.23-.65.23-1.2.16-1.31-.07-.12-.25-.18-.53-.32-.28-.14-1.63-.8-1.88-.89-.25-.1-.43-.14-.61.14-.18.27-.7.89-.86 1.07-.16.18-.32.2-.6.07-.28-.14-1.17-.43-2.23-1.37-.82-.73-1.38-1.63-1.54-1.9-.16-.28-.02-.43.12-.57.13-.13.28-.32.42-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.49-.84-2.04-.22-.54-.45-.47-.61-.47z"/>
+              </svg>
+
+            </a>
+
+
+            <!-- TELEGRAM -->
+            <a
+              href="#"
+              class="social-link"
+              aria-label="Telegram"
+              title="Telegram"
+            >
+
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M21.5 3.4 18.2 20c-.25 1.17-.91 1.46-1.85.91l-5.08-3.74-2.45 2.36c-.27.27-.5.5-1.03.5l.37-5.18 9.44-8.53c.41-.37-.09-.58-.64-.21L5.29 13.53.25 11.95c-1.1-.34-1.12-1.1.23-1.6L20.2 2.68c.92-.34 1.72.22 1.3.72z"/>
+              </svg>
+
+            </a>
+
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
 
   </main>
 
 
-  <!-- FOOTER -->
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
   <footer>
+
     <div class="container">
 
       <div class="footer-top">
 
+
         <div class="footer-brand">
-          <h3>LEVANT DEVELOPMENT INITIATIVE</h3>
+
+          <h3>
+            LEVANT DEVELOPMENT INITIATIVE
+          </h3>
 
           <p
             data-en="A development and cultural bridge between Sweden and Syria."
-            data-ar="جسر للتنمية والتواصل الثقافي بين السويد وسورية.">
+            data-ar="جسر للتنمية والتواصل الثقافي بين السويد وسورية."
+          >
             A development and cultural bridge between Sweden and Syria.
           </p>
+
         </div>
 
+
         <div class="footer-links">
-          <a href="#about" data-en="About" data-ar="من نحن">About</a>
-          <a href="#what-we-do" data-en="What We Do" data-ar="ماذا نفعل">What We Do</a>
-          <a href="#initiatives" data-en="Initiatives" data-ar="المبادرات">Initiatives</a>
-          <a href="#contact" data-en="Contact" data-ar="تواصل معنا">Contact</a>
+
+          <a
+            href="#about"
+            data-en="About"
+            data-ar="من نحن"
+          >
+            About
+          </a>
+
+          <a
+            href="#what-we-do"
+            data-en="What We Do"
+            data-ar="ماذا نفعل"
+          >
+            What We Do
+          </a>
+
+          <a
+            href="#initiatives"
+            data-en="Initiatives"
+            data-ar="المبادرات"
+          >
+            Initiatives
+          </a>
+
+          <a
+            href="#social"
+            data-en="Social Media"
+            data-ar="التواصل الاجتماعي"
+          >
+            Social Media
+          </a>
+
+          <a
+            href="#contact"
+            data-en="Contact"
+            data-ar="تواصل معنا"
+          >
+            Contact
+          </a>
+
         </div>
 
       </div>
+
 
       <div class="footer-bottom">
 
         <span
           data-en="© 2026 LEVANT DEVELOPMENT INITIATIVE. All rights reserved."
-          data-ar="© 2026 مبادرة بلاد الشام للتنمية. جميع الحقوق محفوظة.">
+          data-ar="© 2026 مبادرة بلاد الشام للتنمية. جميع الحقوق محفوظة."
+        >
           © 2026 LEVANT DEVELOPMENT INITIATIVE. All rights reserved.
         </span>
 
         <span
           data-en="Malmö, Sweden"
-          data-ar="مالمو، السويد">
+          data-ar="مالمو، السويد"
+        >
           Malmö, Sweden
         </span>
 
       </div>
 
     </div>
+
   </footer>
 
+
+  <!-- =========================
+       JAVASCRIPT
+  ========================= -->
 
   <script>
 
     let currentLanguage = "en";
 
+
     function toggleLanguage() {
 
-      currentLanguage = currentLanguage === "en" ? "ar" : "en";
+      currentLanguage =
+        currentLanguage === "en"
+          ? "ar"
+          : "en";
 
-      document.documentElement.lang = currentLanguage;
-      document.body.dir = currentLanguage === "ar" ? "rtl" : "ltr";
 
-      const elements = document.querySelectorAll("[data-en][data-ar]");
+      document.documentElement.lang =
+        currentLanguage;
+
+      document.body.dir =
+        currentLanguage === "ar"
+          ? "rtl"
+          : "ltr";
+
+
+      const elements =
+        document.querySelectorAll(
+          "[data-en][data-ar]"
+        );
+
 
       elements.forEach(element => {
-        element.innerHTML = element.getAttribute(
-          currentLanguage === "ar" ? "data-ar" : "data-en"
-        );
+
+        element.innerHTML =
+          element.getAttribute(
+            currentLanguage === "ar"
+              ? "data-ar"
+              : "data-en"
+          );
+
       });
 
-      const languageBtn = document.getElementById("languageBtn");
+
+      const languageBtn =
+        document.getElementById(
+          "languageBtn"
+        );
+
 
       languageBtn.textContent =
-        currentLanguage === "en" ? "العربية" : "English";
+        currentLanguage === "en"
+          ? "العربية"
+          : "English";
+
 
       document.title =
         currentLanguage === "en"
           ? "LEVANT DEVELOPMENT INITIATIVE"
           : "مبادرة بلاد الشام للتنمية";
 
-      document.getElementById("navLinks").classList.remove("active");
+
+      document
+        .getElementById("navLinks")
+        .classList
+        .remove("active");
+
     }
 
 
     function toggleMenu() {
-      document.getElementById("navLinks").classList.toggle("active");
+
+      document
+        .getElementById("navLinks")
+        .classList
+        .toggle("active");
+
     }
 
 
-    document.querySelectorAll(".nav-links a").forEach(link => {
-      link.addEventListener("click", () => {
-        document.getElementById("navLinks").classList.remove("active");
+    document
+      .querySelectorAll(".nav-links a")
+      .forEach(link => {
+
+        link.addEventListener(
+          "click",
+          () => {
+
+            document
+              .getElementById("navLinks")
+              .classList
+              .remove("active");
+
+          }
+        );
+
       });
-    });
 
   </script>
 
