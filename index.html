@@ -1,0 +1,1739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>LEVANT DEVELOPMENT INITIATIVE | مبادرة بلاد الشام للتنمية</title>
+
+  <meta
+    name="description"
+    content="LEVANT DEVELOPMENT INITIATIVE is a non-profit, independent and politically non-partisan organization building development and cultural bridges between Sweden and Syria."
+  >
+
+  <style>
+    :root {
+      --black: #171717;
+      --dark: #252525;
+      --white: #ffffff;
+      --light: #f7f7f5;
+      --gray: #666666;
+      --border: #e6e6e2;
+      --red: #b52b2b;
+      --green: #36734a;
+      --max-width: 1180px;
+      --radius: 18px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--black);
+      background: var(--white);
+      line-height: 1.6;
+    }
+
+    body.rtl {
+      direction: rtl;
+      text-align: right;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(92%, var(--max-width));
+      margin: 0 auto;
+    }
+
+    /* =========================
+       HEADER
+    ========================== */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.96);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(10px);
+    }
+
+    .nav {
+      min-height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    .logo img {
+      width: 155px;
+      height: auto;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+    }
+
+    nav a {
+      font-size: 14px;
+      font-weight: 600;
+      transition: 0.2s ease;
+    }
+
+    nav a:hover {
+      color: var(--green);
+    }
+
+    .language-btn {
+      border: 1px solid var(--black);
+      background: var(--white);
+      color: var(--black);
+      padding: 9px 15px;
+      border-radius: 30px;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 13px;
+    }
+
+    .language-btn:hover {
+      background: var(--black);
+      color: var(--white);
+    }
+
+    .mobile-menu {
+      display: none;
+      border: none;
+      background: transparent;
+      font-size: 26px;
+      cursor: pointer;
+    }
+
+    /* =========================
+       HERO
+    ========================== */
+
+    .hero {
+      min-height: 82vh;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(
+          120deg,
+          rgba(255,255,255,1) 0%,
+          rgba(247,247,245,1) 65%,
+          rgba(244,248,244,1) 100%
+        );
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero-content {
+      max-width: 850px;
+      padding: 90px 0;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      color: var(--green);
+      margin-bottom: 22px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 30px;
+      height: 2px;
+      background: var(--red);
+    }
+
+    .hero h1 {
+      font-size: clamp(44px, 7vw, 78px);
+      line-height: 1.03;
+      letter-spacing: -2px;
+      margin-bottom: 26px;
+    }
+
+    .hero h1 span {
+      color: var(--green);
+    }
+
+    .hero-text {
+      max-width: 720px;
+      font-size: clamp(18px, 2vw, 22px);
+      color: #444;
+      margin-bottom: 36px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 13px 22px;
+      border-radius: 30px;
+      font-weight: 700;
+      border: 1px solid var(--black);
+      transition: 0.2s ease;
+    }
+
+    .btn-primary {
+      background: var(--black);
+      color: var(--white);
+    }
+
+    .btn-primary:hover {
+      background: var(--green);
+      border-color: var(--green);
+    }
+
+    .btn-secondary {
+      background: transparent;
+    }
+
+    .btn-secondary:hover {
+      background: var(--black);
+      color: var(--white);
+    }
+
+    /* =========================
+       GENERAL SECTIONS
+    ========================== */
+
+    section {
+      padding: 100px 0;
+    }
+
+    .section-label {
+      color: var(--red);
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 14px;
+    }
+
+    .section-title {
+      font-size: clamp(34px, 5vw, 52px);
+      line-height: 1.1;
+      letter-spacing: -1px;
+      margin-bottom: 22px;
+    }
+
+    .section-intro {
+      max-width: 720px;
+      color: var(--gray);
+      font-size: 18px;
+    }
+
+    /* =========================
+       ABOUT
+    ========================== */
+
+    .about {
+      background: var(--white);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .about-text p {
+      margin-bottom: 18px;
+      color: #444;
+    }
+
+    .bridge-box {
+      background: var(--light);
+      padding: 45px;
+      border-radius: var(--radius);
+      border-left: 5px solid var(--green);
+    }
+
+    body.rtl .bridge-box {
+      border-left: none;
+      border-right: 5px solid var(--green);
+    }
+
+    .bridge-box h3 {
+      font-size: 30px;
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+
+    .bridge-box p {
+      color: var(--gray);
+    }
+
+    .bridge-line {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 25px;
+      font-weight: 700;
+    }
+
+    .bridge-line span:first-child {
+      color: var(--green);
+    }
+
+    .bridge-line span:last-child {
+      color: var(--red);
+    }
+
+    /* =========================
+       WHAT WE DO
+    ========================== */
+
+    .what-we-do {
+      background: var(--light);
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 50px;
+    }
+
+    .card {
+      background: var(--white);
+      padding: 32px;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      transition: 0.25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.07);
+    }
+
+    .card-number {
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--red);
+      margin-bottom: 25px;
+    }
+
+    .card h3 {
+      font-size: 23px;
+      line-height: 1.2;
+      margin-bottom: 14px;
+    }
+
+    .card p {
+      color: var(--gray);
+      font-size: 15px;
+    }
+
+    /* =========================
+       INITIATIVES
+    ========================== */
+
+    .initiatives {
+      background: var(--white);
+    }
+
+    .initiative-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin-top: 50px;
+    }
+
+    .initiative {
+      padding: 38px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+
+    .initiative h3 {
+      font-size: 24px;
+      margin-bottom: 12px;
+    }
+
+    .initiative p {
+      color: var(--gray);
+    }
+
+    /* =========================
+       GET INVOLVED
+    ========================== */
+
+    .get-involved {
+      background: var(--black);
+      color: var(--white);
+    }
+
+    .get-involved .section-label {
+      color: #d96a6a;
+    }
+
+    .get-involved .section-intro {
+      color: #cfcfcf;
+    }
+
+    .involvement-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 50px;
+    }
+
+    .involvement {
+      border: 1px solid #444;
+      padding: 30px;
+      border-radius: var(--radius);
+    }
+
+    .involvement h3 {
+      font-size: 22px;
+      margin-bottom: 12px;
+    }
+
+    .involvement p {
+      color: #c7c7c7;
+    }
+
+    /* =========================
+       NEWS
+    ========================== */
+
+    .news {
+      background: var(--light);
+    }
+
+    .news-placeholder {
+      margin-top: 45px;
+      padding: 45px;
+      border: 1px dashed #bbb;
+      border-radius: var(--radius);
+      text-align: center;
+      color: var(--gray);
+    }
+
+    /* =========================
+       CONTACT
+    ========================== */
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+    }
+
+    .contact-details {
+      margin-top: 30px;
+    }
+
+    .contact-item {
+      margin-bottom: 22px;
+    }
+
+    .contact-item strong {
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .contact-item a {
+      color: var(--green);
+    }
+
+    .contact-note {
+      background: var(--light);
+      padding: 35px;
+      border-radius: var(--radius);
+    }
+
+    /* =========================
+       GOVERNANCE
+    ========================== */
+
+    .governance {
+      background: var(--white);
+      border-top: 1px solid var(--border);
+    }
+
+    .governance-content {
+      max-width: 800px;
+    }
+
+    .governance-list {
+      margin-top: 30px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .governance-list div {
+      padding: 18px;
+      background: var(--light);
+      border-radius: 12px;
+      font-weight: 600;
+    }
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    footer {
+      background: #111;
+      color: var(--white);
+      padding: 55px 0 25px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr 1fr;
+      gap: 50px;
+      padding-bottom: 45px;
+    }
+
+    .footer-logo {
+      width: 160px;
+      margin-bottom: 18px;
+      background: white;
+      padding: 8px;
+      border-radius: 8px;
+    }
+
+    .footer p {
+      color: #aaa;
+      font-size: 14px;
+    }
+
+    .footer h4 {
+      margin-bottom: 15px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .footer-links a {
+      color: #bbb;
+      font-size: 14px;
+    }
+
+    .footer-links a:hover {
+      color: var(--white);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #333;
+      padding-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      color: #888;
+      font-size: 13px;
+    }
+
+    /* =========================
+       ARABIC
+    ========================== */
+
+    body.rtl .eyebrow::before {
+      order: 2;
+    }
+
+    body.rtl .hero h1,
+    body.rtl .section-title {
+      letter-spacing: 0;
+    }
+
+    body.rtl nav {
+      direction: rtl;
+    }
+
+    /* =========================
+       MOBILE
+    ========================== */
+
+    @media (max-width: 900px) {
+
+      .mobile-menu {
+        display: block;
+      }
+
+      nav {
+        display: none;
+        position: absolute;
+        top: 82px;
+        left: 0;
+        right: 0;
+        background: white;
+        padding: 25px;
+        border-bottom: 1px solid var(--border);
+        flex-direction: column;
+        align-items: stretch;
+        gap: 18px;
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      nav a,
+      .language-btn {
+        text-align: center;
+      }
+
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .cards,
+      .involvement-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .initiative-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .governance-list {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+
+      .nav {
+        min-height: 72px;
+      }
+
+      .logo img {
+        width: 125px;
+      }
+
+      nav {
+        top: 72px;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .hero-content {
+        padding: 75px 0;
+      }
+
+      .hero h1 {
+        font-size: 45px;
+      }
+
+      section {
+        padding: 70px 0;
+      }
+
+      .card,
+      .initiative,
+      .involvement {
+        padding: 25px;
+      }
+
+      .bridge-box {
+        padding: 30px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================
+       HEADER
+  ========================== -->
+
+  <header>
+    <div class="container nav">
+
+      <a href="#home" class="logo">
+        <img src="logo.png" alt="LEVANT Development Initiative">
+      </a>
+
+      <button class="mobile-menu" onclick="toggleMenu()" aria-label="Open menu">
+        ☰
+      </button>
+
+      <nav id="mainNav">
+
+        <a href="#about" data-en="About Us" data-ar="من نحن">About Us</a>
+
+        <a href="#what-we-do" data-en="What We Do" data-ar="ماذا نفعل">
+          What We Do
+        </a>
+
+        <a href="#initiatives" data-en="Our Initiatives" data-ar="مبادراتنا">
+          Our Initiatives
+        </a>
+
+        <a href="#get-involved" data-en="Get Involved" data-ar="شارك معنا">
+          Get Involved
+        </a>
+
+        <a href="#news" data-en="News & Updates" data-ar="الأخبار والتحديثات">
+          News & Updates
+        </a>
+
+        <a href="#contact" data-en="Contact" data-ar="تواصل معنا">
+          Contact
+        </a>
+
+        <button class="language-btn" onclick="toggleLanguage()" id="languageBtn">
+          العربية
+        </button>
+
+      </nav>
+
+    </div>
+  </header>
+
+
+  <!-- =========================
+       HERO
+  ========================== -->
+
+  <main>
+
+    <section class="hero" id="home">
+
+      <div class="container">
+
+        <div class="hero-content">
+
+          <div class="eyebrow" id="heroEyebrow">
+            Sweden & Syria
+          </div>
+
+          <h1 id="heroTitle">
+            Building bridges.<br>
+            <span>Empowering communities.</span>
+          </h1>
+
+          <p class="hero-text" id="heroText">
+            LEVANT DEVELOPMENT INITIATIVE is a non-profit, independent and
+            politically non-partisan organization working to build development
+            and cultural bridges between Sweden and Syria.
+          </p>
+
+          <div class="hero-actions">
+
+            <a
+              href="#what-we-do"
+              class="btn btn-primary"
+              id="heroPrimary"
+            >
+              What We Do
+            </a>
+
+            <a
+              href="#get-involved"
+              class="btn btn-secondary"
+              id="heroSecondary"
+            >
+              Get Involved
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         ABOUT
+    ========================== -->
+
+    <section class="about" id="about">
+
+      <div class="container">
+
+        <div class="about-grid">
+
+          <div class="about-text">
+
+            <div class="section-label" id="aboutLabel">
+              About Us
+            </div>
+
+            <h2 class="section-title" id="aboutTitle">
+              A bridge between people, communities and opportunities.
+            </h2>
+
+            <p id="aboutText1">
+              LEVANT DEVELOPMENT INITIATIVE is a non-profit and independent
+              organization based in Malmö, Sweden.
+            </p>
+
+            <p id="aboutText2">
+              Our work focuses on strengthening individuals, supporting local
+              initiatives, encouraging entrepreneurship and creating meaningful
+              cultural and social connections between Sweden and Syria.
+            </p>
+
+            <p id="aboutText3">
+              We believe sustainable development begins with people who have
+              the knowledge, confidence and opportunity to take initiative.
+            </p>
+
+          </div>
+
+          <div class="bridge-box">
+
+            <h3 id="bridgeTitle">
+              Sweden ↔ Syria
+            </h3>
+
+            <p id="bridgeText">
+              We connect knowledge, people, communities and opportunities
+              across borders while respecting local contexts and needs.
+            </p>
+
+            <div class="bridge-line">
+              <span id="bridgeSweden">SWEDEN</span>
+              <span>↔</span>
+              <span id="bridgeSyria">SYRIA</span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         WHAT WE DO
+    ========================== -->
+
+    <section class="what-we-do" id="what-we-do">
+
+      <div class="container">
+
+        <div class="section-label" id="whatLabel">
+          What We Do
+        </div>
+
+        <h2 class="section-title" id="whatTitle">
+          Turning knowledge and participation into action.
+        </h2>
+
+        <p class="section-intro" id="whatIntro">
+          Our activities are designed to strengthen people, communities and
+          local initiatives in Sweden and Syria.
+        </p>
+
+        <div class="cards">
+
+          <div class="card">
+            <div class="card-number">01</div>
+            <h3 id="card1Title">
+              Individual Development
+            </h3>
+            <p id="card1Text">
+              Training, knowledge exchange and support that strengthen
+              skills, leadership and opportunities for active participation.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card-number">02</div>
+            <h3 id="card2Title">
+              Local Development
+            </h3>
+            <p id="card2Text">
+              Supporting local initiatives and sustainable small-scale
+              development projects that respond to community needs.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card-number">03</div>
+            <h3 id="card3Title">
+              Entrepreneurship
+            </h3>
+            <p id="card3Text">
+              Platforms, networks, advisory services and knowledge support
+              for entrepreneurs and new development initiatives.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card-number">04</div>
+            <h3 id="card4Title">
+              Cultural Exchange
+            </h3>
+            <p id="card4Text">
+              Activities that strengthen friendship, dialogue, mutual
+              understanding and social cohesion.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card-number">05</div>
+            <h3 id="card5Title">
+              Community Support
+            </h3>
+            <p id="card5Text">
+              Information, guidance and advisory support that promote
+              participation and positive integration in Swedish society.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card-number">06</div>
+            <h3 id="card6Title">
+              Partnerships
+            </h3>
+            <p id="card6Text">
+              Cooperation with organizations, public authorities and other
+              relevant actors to advance development and humanitarian goals.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         INITIATIVES
+    ========================== -->
+
+    <section class="initiatives" id="initiatives">
+
+      <div class="container">
+
+        <div class="section-label" id="initiativeLabel">
+          Our Initiatives
+        </div>
+
+        <h2 class="section-title" id="initiativeTitle">
+          From ideas to practical initiatives.
+        </h2>
+
+        <p class="section-intro" id="initiativeIntro">
+          This space will showcase our projects, partnerships and development
+          initiatives as they grow.
+        </p>
+
+        <div class="initiative-grid">
+
+          <div class="initiative">
+            <h3 id="initiative1Title">
+              Community Development
+            </h3>
+            <p id="initiative1Text">
+              Future initiatives supporting local communities, participation
+              and sustainable development.
+            </p>
+          </div>
+
+          <div class="initiative">
+            <h3 id="initiative2Title">
+              Knowledge & Skills
+            </h3>
+            <p id="initiative2Text">
+              Training, mentoring and knowledge-sharing opportunities for
+              individuals and local actors.
+            </p>
+          </div>
+
+          <div class="initiative">
+            <h3 id="initiative3Title">
+              Entrepreneurship
+            </h3>
+            <p id="initiative3Text">
+              Supporting entrepreneurs and new ideas through networks,
+              advisory services and practical knowledge.
+            </p>
+          </div>
+
+          <div class="initiative">
+            <h3 id="initiative4Title">
+              Sweden–Syria Exchange
+            </h3>
+            <p id="initiative4Text">
+              Cultural, social and professional initiatives that create
+              meaningful connections between Sweden and Syria.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         GET INVOLVED
+    ========================== -->
+
+    <section class="get-involved" id="get-involved">
+
+      <div class="container">
+
+        <div class="section-label" id="involvedLabel">
+          Get Involved
+        </div>
+
+        <h2 class="section-title" id="involvedTitle">
+          Development happens when people participate.
+        </h2>
+
+        <p class="section-intro" id="involvedIntro">
+          There are different ways to contribute to the work of LEVANT
+          DEVELOPMENT INITIATIVE.
+        </p>
+
+        <div class="involvement-grid">
+
+          <div class="involvement">
+            <h3 id="memberTitle">Become a Member</h3>
+            <p id="memberText">
+              Membership is open to people who support the objectives of the
+              association and accept its bylaws.
+            </p>
+          </div>
+
+          <div class="involvement">
+            <h3 id="volunteerTitle">Volunteer</h3>
+            <p id="volunteerText">
+              Contribute your knowledge, skills and time to community and
+              development initiatives.
+            </p>
+          </div>
+
+          <div class="involvement">
+            <h3 id="partnerTitle">Partner With Us</h3>
+            <p id="partnerText">
+              Organizations and institutions can collaborate with us on
+              development, cultural and humanitarian objectives.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         NEWS
+    ========================== -->
+
+    <section class="news" id="news">
+
+      <div class="container">
+
+        <div class="section-label" id="newsLabel">
+          News & Updates
+        </div>
+
+        <h2 class="section-title" id="newsTitle">
+          Follow our work.
+        </h2>
+
+        <p class="section-intro" id="newsIntro">
+          Updates about our activities, initiatives, partnerships and
+          community work will be published here.
+        </p>
+
+        <div class="news-placeholder" id="newsPlaceholder">
+          News and updates coming soon.
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         GOVERNANCE
+    ========================== -->
+
+    <section class="governance">
+
+      <div class="container">
+
+        <div class="governance-content">
+
+          <div class="section-label" id="governanceLabel">
+            Governance
+          </div>
+
+          <h2 class="section-title" id="governanceTitle">
+            Transparent and member-led.
+          </h2>
+
+          <p class="section-intro" id="governanceIntro">
+            The Annual General Meeting is the highest decision-making body
+            of the association. The association is governed according to its
+            bylaws and Swedish legislation.
+          </p>
+
+          <div class="governance-list">
+
+            <div id="gov1">Annual General Meeting</div>
+            <div id="gov2">Board of Directors</div>
+            <div id="gov3">Auditor</div>
+            <div id="gov4">Calendar Financial Year</div>
+            <div id="gov5">Digital Meetings</div>
+            <div id="gov6">Conflict of Interest Policy</div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACT
+    ========================== -->
+
+    <section id="contact">
+
+      <div class="container">
+
+        <div class="contact-grid">
+
+          <div>
+
+            <div class="section-label" id="contactLabel">
+              Contact
+            </div>
+
+            <h2 class="section-title" id="contactTitle">
+              Let’s build something meaningful together.
+            </h2>
+
+            <div class="contact-details">
+
+              <div class="contact-item">
+                <strong id="contactOrg">LEVANT DEVELOPMENT INITIATIVE</strong>
+                <span>Malmö, Sweden</span>
+              </div>
+
+              <div class="contact-item">
+                <strong>Organisationsnummer</strong>
+                <span>802557-8157</span>
+              </div>
+
+              <div class="contact-item">
+                <strong id="contactPhoneLabel">Phone</strong>
+                <a href="tel:+46739033301">0739 033301</a>
+              </div>
+
+              <div class="contact-item">
+                <strong>Email</strong>
+                <a href="mailto:info@levant-dev.org">
+                  info@levant-dev.org
+                </a>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="contact-note">
+
+            <h3 id="contactNoteTitle">
+              Our commitment
+            </h3>
+
+            <p id="contactNoteText">
+              We aim to create practical opportunities for people and
+              communities to develop, participate and connect across Sweden
+              and Syria.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer>
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div>
+
+          <img
+            src="logo.png"
+            alt="LEVANT Development Initiative"
+            class="footer-logo"
+          >
+
+          <p id="footerDescription">
+            A non-profit, independent and politically non-partisan
+            organization building development and cultural bridges between
+            Sweden and Syria.
+          </p>
+
+        </div>
+
+        <div>
+
+          <h4 id="footerExplore">Explore</h4>
+
+          <div class="footer-links">
+            <a href="#about" id="footerAbout">About Us</a>
+            <a href="#what-we-do" id="footerWhat">What We Do</a>
+            <a href="#initiatives" id="footerInitiatives">Our Initiatives</a>
+            <a href="#get-involved" id="footerInvolved">Get Involved</a>
+          </div>
+
+        </div>
+
+        <div>
+
+          <h4 id="footerContact">Contact</h4>
+
+          <div class="footer-links">
+            <a href="mailto:info@levant-dev.org">
+              info@levant-dev.org
+            </a>
+
+            <a href="tel:+46739033301">
+              0739 033301
+            </a>
+
+            <span>Malmö, Sweden</span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+
+        <span>
+          © 2026 LEVANT DEVELOPMENT INITIATIVE
+        </span>
+
+        <span>
+          Organisationsnummer: 802557-8157
+        </span>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =========================
+       JAVASCRIPT
+  ========================== -->
+
+  <script>
+
+    let currentLanguage = "en";
+
+    function toggleMenu() {
+      const nav = document.getElementById("mainNav");
+      nav.classList.toggle("active");
+    }
+
+    function toggleLanguage() {
+
+      if (currentLanguage === "en") {
+        setArabic();
+      } else {
+        setEnglish();
+      }
+
+    }
+
+    function setEnglish() {
+
+      currentLanguage = "en";
+
+      document.documentElement.lang = "en";
+      document.body.classList.remove("rtl");
+
+      document.getElementById("languageBtn").textContent = "العربية";
+
+      const elements = document.querySelectorAll("[data-en]");
+
+      elements.forEach(element => {
+        element.textContent = element.getAttribute("data-en");
+      });
+
+      document.getElementById("heroEyebrow").textContent = "Sweden & Syria";
+
+      document.getElementById("heroTitle").innerHTML =
+        'Building bridges.<br><span>Empowering communities.</span>';
+
+      document.getElementById("heroText").textContent =
+        "LEVANT DEVELOPMENT INITIATIVE is a non-profit, independent and politically non-partisan organization working to build development and cultural bridges between Sweden and Syria.";
+
+      document.getElementById("heroPrimary").textContent = "What We Do";
+      document.getElementById("heroSecondary").textContent = "Get Involved";
+
+      document.getElementById("aboutLabel").textContent = "About Us";
+      document.getElementById("aboutTitle").textContent =
+        "A bridge between people, communities and opportunities.";
+
+      document.getElementById("aboutText1").textContent =
+        "LEVANT DEVELOPMENT INITIATIVE is a non-profit and independent organization based in Malmö, Sweden.";
+
+      document.getElementById("aboutText2").textContent =
+        "Our work focuses on strengthening individuals, supporting local initiatives, encouraging entrepreneurship and creating meaningful cultural and social connections between Sweden and Syria.";
+
+      document.getElementById("aboutText3").textContent =
+        "We believe sustainable development begins with people who have the knowledge, confidence and opportunity to take initiative.";
+
+      document.getElementById("bridgeTitle").textContent = "Sweden ↔ Syria";
+
+      document.getElementById("bridgeText").textContent =
+        "We connect knowledge, people, communities and opportunities across borders while respecting local contexts and needs.";
+
+      document.getElementById("bridgeSweden").textContent = "SWEDEN";
+      document.getElementById("bridgeSyria").textContent = "SYRIA";
+
+      document.getElementById("whatLabel").textContent = "What We Do";
+
+      document.getElementById("whatTitle").textContent =
+        "Turning knowledge and participation into action.";
+
+      document.getElementById("whatIntro").textContent =
+        "Our activities are designed to strengthen people, communities and local initiatives in Sweden and Syria.";
+
+      document.getElementById("card1Title").textContent = "Individual Development";
+      document.getElementById("card1Text").textContent =
+        "Training, knowledge exchange and support that strengthen skills, leadership and opportunities for active participation.";
+
+      document.getElementById("card2Title").textContent = "Local Development";
+      document.getElementById("card2Text").textContent =
+        "Supporting local initiatives and sustainable small-scale development projects that respond to community needs.";
+
+      document.getElementById("card3Title").textContent = "Entrepreneurship";
+      document.getElementById("card3Text").textContent =
+        "Platforms, networks, advisory services and knowledge support for entrepreneurs and new development initiatives.";
+
+      document.getElementById("card4Title").textContent = "Cultural Exchange";
+      document.getElementById("card4Text").textContent =
+        "Activities that strengthen friendship, dialogue, mutual understanding and social cohesion.";
+
+      document.getElementById("card5Title").textContent = "Community Support";
+      document.getElementById("card5Text").textContent =
+        "Information, guidance and advisory support that promote participation and positive integration in Swedish society.";
+
+      document.getElementById("card6Title").textContent = "Partnerships";
+      document.getElementById("card6Text").textContent =
+        "Cooperation with organizations, public authorities and other relevant actors to advance development and humanitarian goals.";
+
+      document.getElementById("initiativeLabel").textContent = "Our Initiatives";
+
+      document.getElementById("initiativeTitle").textContent =
+        "From ideas to practical initiatives.";
+
+      document.getElementById("initiativeIntro").textContent =
+        "This space will showcase our projects, partnerships and development initiatives as they grow.";
+
+      document.getElementById("initiative1Title").textContent = "Community Development";
+      document.getElementById("initiative1Text").textContent =
+        "Future initiatives supporting local communities, participation and sustainable development.";
+
+      document.getElementById("initiative2Title").textContent = "Knowledge & Skills";
+      document.getElementById("initiative2Text").textContent =
+        "Training, mentoring and knowledge-sharing opportunities for individuals and local actors.";
+
+      document.getElementById("initiative3Title").textContent = "Entrepreneurship";
+      document.getElementById("initiative3Text").textContent =
+        "Supporting entrepreneurs and new ideas through networks, advisory services and practical knowledge.";
+
+      document.getElementById("initiative4Title").textContent = "Sweden–Syria Exchange";
+      document.getElementById("initiative4Text").textContent =
+        "Cultural, social and professional initiatives that create meaningful connections between Sweden and Syria.";
+
+      document.getElementById("involvedLabel").textContent = "Get Involved";
+
+      document.getElementById("involvedTitle").textContent =
+        "Development happens when people participate.";
+
+      document.getElementById("involvedIntro").textContent =
+        "There are different ways to contribute to the work of LEVANT DEVELOPMENT INITIATIVE.";
+
+      document.getElementById("memberTitle").textContent = "Become a Member";
+      document.getElementById("memberText").textContent =
+        "Membership is open to people who support the objectives of the association and accept its bylaws.";
+
+      document.getElementById("volunteerTitle").textContent = "Volunteer";
+      document.getElementById("volunteerText").textContent =
+        "Contribute your knowledge, skills and time to community and development initiatives.";
+
+      document.getElementById("partnerTitle").textContent = "Partner With Us";
+      document.getElementById("partnerText").textContent =
+        "Organizations and institutions can collaborate with us on development, cultural and humanitarian objectives.";
+
+      document.getElementById("newsLabel").textContent = "News & Updates";
+      document.getElementById("newsTitle").textContent = "Follow our work.";
+
+      document.getElementById("newsIntro").textContent =
+        "Updates about our activities, initiatives, partnerships and community work will be published here.";
+
+      document.getElementById("newsPlaceholder").textContent =
+        "News and updates coming soon.";
+
+      document.getElementById("governanceLabel").textContent = "Governance";
+      document.getElementById("governanceTitle").textContent =
+        "Transparent and member-led.";
+
+      document.getElementById("governanceIntro").textContent =
+        "The Annual General Meeting is the highest decision-making body of the association. The association is governed according to its bylaws and Swedish legislation.";
+
+      document.getElementById("gov1").textContent = "Annual General Meeting";
+      document.getElementById("gov2").textContent = "Board of Directors";
+      document.getElementById("gov3").textContent = "Auditor";
+      document.getElementById("gov4").textContent = "Calendar Financial Year";
+      document.getElementById("gov5").textContent = "Digital Meetings";
+      document.getElementById("gov6").textContent = "Conflict of Interest Policy";
+
+      document.getElementById("contactLabel").textContent = "Contact";
+      document.getElementById("contactTitle").textContent =
+        "Let’s build something meaningful together.";
+
+      document.getElementById("contactOrg").textContent =
+        "LEVANT DEVELOPMENT INITIATIVE";
+
+      document.getElementById("contactPhoneLabel").textContent = "Phone";
+
+      document.getElementById("contactNoteTitle").textContent =
+        "Our commitment";
+
+      document.getElementById("contactNoteText").textContent =
+        "We aim to create practical opportunities for people and communities to develop, participate and connect across Sweden and Syria.";
+
+      document.getElementById("footerDescription").textContent =
+        "A non-profit, independent and politically non-partisan organization building development and cultural bridges between Sweden and Syria.";
+
+      document.getElementById("footerExplore").textContent = "Explore";
+      document.getElementById("footerAbout").textContent = "About Us";
+      document.getElementById("footerWhat").textContent = "What We Do";
+      document.getElementById("footerInitiatives").textContent = "Our Initiatives";
+      document.getElementById("footerInvolved").textContent = "Get Involved";
+      document.getElementById("footerContact").textContent = "Contact";
+
+    }
+
+
+    function setArabic() {
+
+      currentLanguage = "ar";
+
+      document.documentElement.lang = "ar";
+      document.body.classList.add("rtl");
+
+      document.getElementById("languageBtn").textContent = "English";
+
+      const elements = document.querySelectorAll("[data-ar]");
+
+      elements.forEach(element => {
+        element.textContent = element.getAttribute("data-ar");
+      });
+
+      document.getElementById("heroEyebrow").textContent =
+        "السويد وسوريا";
+
+      document.getElementById("heroTitle").innerHTML =
+        'نبني الجسور.<br><span>ونمكّن المجتمعات.</span>';
+
+      document.getElementById("heroText").textContent =
+        "مبادرة بلاد الشام للتنمية هي جمعية غير ربحية ومستقلة وغير مرتبطة بأي حزب سياسي، تعمل على بناء جسور تنموية وثقافية بين السويد وسوريا.";
+
+      document.getElementById("heroPrimary").textContent =
+        "ماذا نفعل";
+
+      document.getElementById("heroSecondary").textContent =
+        "شارك معنا";
+
+      document.getElementById("aboutLabel").textContent = "من نحن";
+
+      document.getElementById("aboutTitle").textContent =
+        "جسر بين الأفراد والمجتمعات والفرص.";
+
+      document.getElementById("aboutText1").textContent =
+        "مبادرة بلاد الشام للتنمية هي جمعية غير ربحية ومستقلة مقرها مدينة مالمو في السويد.";
+
+      document.getElementById("aboutText2").textContent =
+        "نركز في عملنا على تمكين الأفراد، ودعم المبادرات المحلية، وتشجيع ريادة الأعمال، وبناء روابط ثقافية واجتماعية ذات معنى بين السويد وسوريا.";
+
+      document.getElementById("aboutText3").textContent =
+        "نؤمن بأن التنمية المستدامة تبدأ من الإنسان الذي يمتلك المعرفة والثقة والفرصة للمبادرة.";
+
+      document.getElementById("bridgeTitle").textContent =
+        "السويد ↔ سوريا";
+
+      document.getElementById("bridgeText").textContent =
+        "نربط المعرفة والأفراد والمجتمعات والفرص عبر الحدود، مع احترام السياقات والاحتياجات المحلية.";
+
+      document.getElementById("bridgeSweden").textContent = "السويد";
+      document.getElementById("bridgeSyria").textContent = "سوريا";
+
+      document.getElementById("whatLabel").textContent =
+        "ماذا نفعل";
+
+      document.getElementById("whatTitle").textContent =
+        "نحوّل المعرفة والمشاركة إلى عمل.";
+
+      document.getElementById("whatIntro").textContent =
+        "تهدف أنشطتنا إلى تمكين الأفراد والمجتمعات ودعم المبادرات المحلية في السويد وسوريا.";
+
+      document.getElementById("card1Title").textContent =
+        "تنمية وتمكين الأفراد";
+
+      document.getElementById("card1Text").textContent =
+        "التدريب وتبادل المعرفة والدعم الذي يعزز المهارات والقدرات القيادية وفرص المشاركة الفاعلة.";
+
+      document.getElementById("card2Title").textContent =
+        "التنمية المحلية";
+
+      document.getElementById("card2Text").textContent =
+        "دعم المبادرات المحلية والمشاريع التنموية الصغيرة والمستدامة التي تستجيب لاحتياجات المجتمعات.";
+
+      document.getElementById("card3Title").textContent =
+        "ريادة الأعمال";
+
+      document.getElementById("card3Text").textContent =
+        "توفير المنصات والشبكات والاستشارات والدعم المعرفي لرواد الأعمال والمبادرات التنموية الجديدة.";
+
+      document.getElementById("card4Title").textContent =
+        "التبادل الثقافي";
+
+      document.getElementById("card4Text").textContent =
+        "أنشطة تعزز الصداقة والحوار والتفاهم المتبادل والتماسك الاجتماعي.";
+
+      document.getElementById("card5Title").textContent =
+        "دعم المجتمع";
+
+      document.getElementById("card5Text").textContent =
+        "توفير المعلومات والإرشاد والاستشارات التي تعزز المشاركة والاندماج الإيجابي في المجتمع السويدي.";
+
+      document.getElementById("card6Title").textContent =
+        "الشراكات";
+
+      document.getElementById("card6Text").textContent =
+        "التعاون مع المنظمات والجهات الحكومية والأطراف ذات الصلة لتعزيز الأهداف التنموية والإنسانية.";
+
+      document.getElementById("initiativeLabel").textContent =
+        "مبادراتنا";
+
+      document.getElementById("initiativeTitle").textContent =
+        "من الأفكار إلى المبادرات العملية.";
+
+      document.getElementById("initiativeIntro").textContent =
+        "سيتم هنا عرض مشاريعنا وشراكاتنا ومبادراتنا التنموية مع تطورها.";
+
+      document.getElementById("initiative1Title").textContent =
+        "تنمية المجتمع";
+
+      document.getElementById("initiative1Text").textContent =
+        "مبادرات مستقبلية لدعم المجتمعات المحلية والمشاركة والتنمية المستدامة.";
+
+      document.getElementById("initiative2Title").textContent =
+        "المعرفة والمهارات";
+
+      document.getElementById("initiative2Text").textContent =
+        "فرص التدريب والإرشاد وتبادل المعرفة للأفراد والجهات المحلية.";
+
+      document.getElementById("initiative3Title").textContent =
+        "ريادة الأعمال";
+
+      document.getElementById("initiative3Text").textContent =
+        "دعم رواد الأعمال والأفكار الجديدة من خلال الشبكات والاستشارات والمعرفة العملية.";
+
+      document.getElementById("initiative4Title").textContent =
+        "التبادل السويدي السوري";
+
+      document.getElementById("initiative4Text").textContent =
+        "مبادرات ثقافية واجتماعية ومهنية تخلق روابط ذات معنى بين السويد وسوريا.";
+
+      document.getElementById("involvedLabel").textContent =
+        "شارك معنا";
+
+      document.getElementById("involvedTitle").textContent =
+        "التنمية تبدأ عندما يشارك الناس.";
+
+      document.getElementById("involvedIntro").textContent =
+        "هناك طرق مختلفة للمساهمة في عمل مبادرة بلاد الشام للتنمية.";
+
+      document.getElementById("memberTitle").textContent =
+        "كن عضوًا";
+
+      document.getElementById("memberText").textContent =
+        "العضوية مفتوحة للأشخاص الذين يدعمون أهداف الجمعية ويوافقون على نظامها الداخلي.";
+
+      document.getElementById("volunteerTitle").textContent =
+        "تطوع معنا";
+
+      document.getElementById("volunteerText").textContent =
+        "ساهم بمعرفتك ومهاراتك ووقتك في المبادرات المجتمعية والتنموية.";
+
+      document.getElementById("partnerTitle").textContent =
+        "كن شريكًا";
+
+      document.getElementById("partnerText").textContent =
+        "يمكن للمنظمات والمؤسسات التعاون معنا في المجالات التنموية والثقافية والإنسانية.";
+
+      document.getElementById("newsLabel").textContent =
+        "الأخبار والتحديثات";
+
+      document.getElementById("newsTitle").textContent =
+        "تابع عملنا.";
+
+      document.getElementById("newsIntro").textContent =
+        "سيتم نشر التحديثات المتعلقة بأنشطتنا ومبادراتنا وشراكاتنا وعملنا المجتمعي هنا.";
+
+      document.getElementById("newsPlaceholder").textContent =
+        "الأخبار والتحديثات قريبًا.";
+
+      document.getElementById("governanceLabel").textContent =
+        "الحوكمة";
+
+      document.getElementById("governanceTitle").textContent =
+        "شفافية وإدارة قائمة على الأعضاء.";
+
+      document.getElementById("governanceIntro").textContent =
+        "الاجتماع السنوي هو أعلى هيئة لاتخاذ القرارات في الجمعية. وتدار الجمعية وفق نظامها الداخلي والتشريعات السويدية.";
+
+      document.getElementById("gov1").textContent =
+        "الاجتماع السنوي";
+
+      document.getElementById("gov2").textContent =
+        "مجلس الإدارة";
+
+      document.getElementById("gov3").textContent =
+        "المدقق المالي";
+
+      document.getElementById("gov4").textContent =
+        "السنة المالية الميلادية";
+
+      document.getElementById("gov5").textContent =
+        "الاجتماعات الرقمية";
+
+      document.getElementById("gov6").textContent =
+        "تضارب المصالح";
+
+      document.getElementById("contactLabel").textContent =
+        "تواصل معنا";
+
+      document.getElementById("contactTitle").textContent =
+        "لنبنِ شيئًا ذا معنى معًا.";
+
+      document.getElementById("contactOrg").textContent =
+        "مبادرة بلاد الشام للتنمية";
+
+      document.getElementById("contactPhoneLabel").textContent =
+        "الهاتف";
+
+      document.getElementById("contactNoteTitle").textContent =
+        "التزامنا";
+
+      document.getElementById("contactNoteText").textContent =
+        "نسعى إلى خلق فرص عملية للأفراد والمجتمعات للتطور والمشاركة والتواصل بين السويد وسوريا.";
+
+      document.getElementById("footerDescription").textContent =
+        "جمعية غير ربحية ومستقلة وغير مرتبطة بأي حزب سياسي، تعمل على بناء جسور تنموية وثقافية بين السويد وسوريا.";
+
+      document.getElementById("footerExplore").textContent =
+        "استكشف";
+
+      document.getElementById("footerAbout").textContent =
+        "من نحن";
+
+      document.getElementById("footerWhat").textContent =
+        "ماذا نفعل";
+
+      document.getElementById("footerInitiatives").textContent =
+        "مبادراتنا";
+
+      document.getElementById("footerInvolved").textContent =
+        "شارك معنا";
+
+      document.getElementById("footerContact").textContent =
+        "تواصل معنا";
+
+    }
+
+  </script>
+
+</body>
+</html>
